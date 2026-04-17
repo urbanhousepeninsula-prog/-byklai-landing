@@ -320,11 +320,12 @@ export default function Home() {
 
             {status === 'success' ? (
               <div className="py-12 text-center">
-                <p className="font-serif text-[28px] tracking-tight mb-3">Recibido, {form.nombre}.</p>
-                <p className="text-ink2 text-[14px] font-mono leading-relaxed">
-                  Revisaré tu caso y te escribo en menos de 24 horas.<br />
-                  Revisa tu bandeja — ya te envié una confirmación.
-                </p>
+               <p className="font-serif text-[28px] tracking-tight mb-3">Recibido, {form.nombre}.</p>
+<p className="text-ink2 text-[14px] font-mono leading-relaxed">
+  Tu solicitud ya fue procesada correctamente.<br /><br />
+  Acabas de entrar a un flujo automatizado real: tu información se registró, se procesó y activó el seguimiento automáticamente.<br /><br />
+  Revisa tu correo — ya deberías haber recibido la primera respuesta.
+</p>
               </div>
             ) : (
               <div ref={formRef} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
