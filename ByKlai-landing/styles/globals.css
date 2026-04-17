@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0a0a0a;
+  --ink2: #3a3a3a;
+  --ink3: #888888;
+  --surface: #fafaf8;
+  --surface2: #f2f1ed;
+  --line: rgba(0, 0, 0, 0.08);
+  --green: #2d6a4f;
+  --green-bg: #d8f3dc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+.font-serif {
+  font-family: 'DM Serif Display', serif;
+}
+
+.font-mono {
+  font-family: 'DM Mono', monospace;
+}
+
+.font-sans {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
