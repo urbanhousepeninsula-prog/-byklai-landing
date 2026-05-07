@@ -1,57 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --ink: #0a0a0a;
-  --ink2: #3a3a3a;
-  --ink3: #888888;
-  --surface: #fafaf8;
-  --surface2: #f2f1ed;
-  --line: rgba(0, 0, 0, 0.08);
-  --green: #2d6a4f;
-  --green-bg: #d8f3dc;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Outfit', sans-serif;
-  background-color: var(--surface);
-  color: var(--ink);
-}
-
-.font-serif {
-  font-family: 'DM Serif Display', serif;
-}
-
-.font-mono {
-  font-family: 'DM Mono', monospace;
-}
-
-.font-sans {
-  font-family: 'Outfit', sans-serif;
-}
-
-/* Scrollbar hide utility */
-.scrollbar-hide::-webkit-scrollbar { display: none; }
-.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-
 /* ─────────────────────────────────────────
-   CaseStudy — estilos globales
-   Prefijo .case-* para evitar colisiones
+   CaseStudy.module.css  (o agrega al globals.css)
+   Prefijo: .case-*  para evitar colisiones
 ───────────────────────────────────────── */
 
-.wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
+/* ── CONTENEDOR DE SECCIÓN ── */
 .section {
   padding: 70px 0;
   border-bottom: 1px solid var(--line);
@@ -79,6 +31,7 @@ body {
   font-style: italic;
 }
 
+/* ── TARJETA PRINCIPAL ── */
 .case-card {
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -86,6 +39,7 @@ body {
   background: #fff;
 }
 
+/* ── HEADER ── */
 .case-header {
   padding: 36px 36px 28px;
   border-bottom: 1px solid var(--line);
@@ -126,6 +80,7 @@ body {
   line-height: 1.6;
 }
 
+/* ── DIAGNÓSTICO ── */
 .case-diag {
   padding: 24px 36px;
   background: var(--surface2);
@@ -148,6 +103,7 @@ body {
   font-weight: 300;
 }
 
+/* ── PILARES ── */
 .case-pillars {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -191,6 +147,7 @@ body {
   font-weight: 300;
 }
 
+/* ── DELIVERABLES ── */
 .case-deliverables {
   padding: 28px 36px;
   border-bottom: 1px solid var(--line);
@@ -224,6 +181,7 @@ body {
   line-height: 1.45;
 }
 
+/* ── STACK ── */
 .case-stack {
   padding: 20px 36px;
   border-bottom: 1px solid var(--line);
@@ -257,6 +215,7 @@ body {
   color: var(--ink2);
 }
 
+/* ── LIGHTHOUSE ── */
 .case-lighthouse {
   padding: 28px 36px;
   border-bottom: 1px solid var(--line);
@@ -331,6 +290,7 @@ body {
   line-height: 1.3;
 }
 
+/* ── CORE WEB VITALS ── */
 .cwv-block {
   border-top: 1px solid var(--line);
   padding-top: 20px;
@@ -368,6 +328,7 @@ body {
   line-height: 1.3;
 }
 
+/* ── RESULTADO ── */
 .case-result {
   padding: 28px 36px;
   background: var(--ink);
@@ -391,6 +352,7 @@ body {
   max-width: 620px;
 }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   .case-header,
   .case-diag,

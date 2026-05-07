@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState, useRef } from 'react'
-
-const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL || ''
+import CaseStudy from '../components/CaseStudy'
 
 interface FormData {
   nombre: string
@@ -66,7 +65,7 @@ export default function Home() {
     setStatus('loading')
 
     try {
-      const res = await fetch(WEBHOOK_URL, {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -231,36 +230,7 @@ export default function Home() {
         </section>
 
         {/* CASE STUDY */}
-        <section className="max-w-4xl mx-auto px-6 py-16 border-b border-line">
-          <p className="font-mono text-[11px] uppercase tracking-widest text-ink3 mb-5">proyecto real</p>
-          <h2 className="font-serif text-[clamp(26px,4vw,40px)] leading-tight tracking-tight mb-8 max-w-xl">
-            Sistema implementado, no<br /><em>solo diseñado.</em>
-          </h2>
-          <div className="border border-line rounded-2xl p-8 bg-white">
-            <span className="inline-block font-mono text-[11px] uppercase tracking-wider text-green bg-green-bg px-2.5 py-1 rounded mb-5">caso de estudio</span>
-            <h3 className="font-serif text-[26px] tracking-tight mb-2">Pekmex Is Life</h3>
-            <p className="text-[14px] text-ink2 mb-5">Sistema de captación, segmentación y automatización de leads</p>
-            <p className="text-[14px] text-ink2 leading-relaxed">No existía sistema para captar ni dar seguimiento. Se diseñó e implementó el flujo completo: desde el primer contacto hasta el seguimiento automatizado, con CRM integrado y listo para escalar.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-              <div>
-                <h4 className="font-mono text-[12px] uppercase tracking-wider text-ink3 mb-3 pb-2 border-b border-line">lo que se construyó</h4>
-                <ul className="flex flex-col gap-1.5">
-                  {['Landing + segmentación desde el primer contacto', 'Webhook → CRM → email en un solo flujo', 'Automatización completa del seguimiento', 'Base lista para escalar sin tocar código'].map(li => (
-                    <li key={li} className="text-[13px] text-ink2 pl-3.5 relative leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-ink3 before:text-[11px] before:top-0.5">{li}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-mono text-[12px] uppercase tracking-wider text-ink3 mb-3 pb-2 border-b border-line">infraestructura</h4>
-                <div className="flex flex-wrap gap-1.5 mt-3">
-                  {['n8n', 'Next.js', 'Vercel', 'Google Sheets', 'HubSpot', 'Resend', 'DNS / dominios'].map(chip => (
-                    <span key={chip} className="font-mono text-[11px] px-2.5 py-1 border border-line rounded-full text-ink2">{chip}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CaseStudy />
 
         {/* PRICING */}
         <section className="max-w-4xl mx-auto px-6 py-16 border-b border-line">
@@ -320,12 +290,11 @@ export default function Home() {
 
             {status === 'success' ? (
               <div className="py-12 text-center">
-               <p className="font-serif text-[28px] tracking-tight mb-3">Recibido, {form.nombre}.</p>
-<p className="text-ink2 text-[14px] font-mono leading-relaxed">
-  Tu solicitud ya fue procesada correctamente.<br /><br />
-  Acabas de entrar a un flujo automatizado real: tu información se registró, se procesó y activó el seguimiento automáticamente.<br /><br />
-  Revisa tu correo — ya deberías haber recibido la primera respuesta.
-</p>
+                <p className="font-serif text-[28px] tracking-tight mb-3">Recibido, {form.nombre}.</p>
+                <p className="text-ink2 text-[14px] font-mono leading-relaxed">
+                  Revisaré tu caso y te escribo en menos de 24 horas.<br />
+                  Revisa tu bandeja — ya te envié una confirmación.
+                </p>
               </div>
             ) : (
               <div ref={formRef} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
