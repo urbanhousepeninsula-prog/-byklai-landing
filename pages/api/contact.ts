@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-const WEBHOOK_URL = process.env.WEBHOOK_URL || ''
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL || ''
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
