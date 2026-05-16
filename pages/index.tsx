@@ -96,16 +96,83 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>byklai.com — sistemas automatizados de captación</title>
-        <meta name="description" content="Diseño e implementación del sistema completo que conecta tu landing, formulario, CRM y seguimiento automático — desde el día uno, sin intervención manual." />
+        <title>Byklai · Automatización y desarrollo web en Mérida, México</title>
+        <meta name="description" content="Sistemas automatizados de captación de leads en Mérida, México. Landing pages, n8n, CRM y email automation para negocios en LATAM. Fundado por Armando Medina Vázquez." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="byklai.com — sistemas automatizados de captación" />
-        <meta property="og:description" content="Landing → Formulario → Webhook → CRM → Email → Seguimiento. Todo conectado, sin intervención manual." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Byklai · Automatización y desarrollo web en Mérida" />
+        <meta property="og:description" content="Diseño e implementación de ecosistemas digitales completos. Next.js, n8n, Stripe y Sanity CMS." />
+        <meta property="og:url" content="https://www.byklai.com" />
+        <meta property="og:site_name" content="Byklai" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: `{"@context":"https://schema.org","@type":"LocalBusiness","name":"Byklai - Sistemas Automatizados de Captación","image":"https://www.byklai.com/_next/image?url=%2Flogo-byklai_TN.png&w=384&q=75","url":"https://www.byklai.com","telephone":"+52 000 000 0000","address":{"@type":"PostalAddress","addressLocality":"Mérida","addressRegion":"YUC","addressCountry":"MX"},"priceRange":"$800 - $1800","description":"Diseño e implementación de sistemas completos de captación de leads y automatización para negocios.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Servicios de Automatización de Captación","itemListElement":[{"@type":"OfferCatalog","name":"Plan Básico","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Landing page optimizada"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Formulario + webhook"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatización inicial n8n"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Deploy en Vercel"}}]},{"@type":"OfferCatalog","name":"Plan Completo","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Todo lo del plan Básico"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM integrado (Sheets / HubSpot)"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Email automation con Resend"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"DNS + entregabilidad"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Seguimiento automático"}}]},{"@type":"OfferCatalog","name":"Plan Avanzado","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Todo lo del plan Completo"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Lógica condicional avanzada"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Flujos de venta automatizados"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Escalabilidad sin rehacer el sistema"}}]}]}}` }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Byklai",
+              "alternateName": "Byklai — Sistemas Automatizados de Captación",
+              "url": "https://www.byklai.com",
+              "logo": "https://www.byklai.com/logo-byklai_TN.png",
+              "description": "Byklai es un estudio de sistemas digitales en Mérida, México, fundado por Armando Medina Vázquez. Diseña e implementa ecosistemas completos de captación de leads, automatización de procesos y desarrollo web con Next.js, n8n, Sanity CMS y Stripe. Especializado en infraestructura digital para negocios en LATAM.",
+              "founder": {
+                "@type": "Person",
+                "name": "Armando Medina Vázquez",
+                "jobTitle": "Fundador y Director",
+                "url": "https://www.byklai.com"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Mérida",
+                "addressRegion": "Yucatán",
+                "postalCode": "97000",
+                "addressCountry": "MX"
+              },
+              "areaServed": [
+                { "@type": "Country", "name": "México" },
+                { "@type": "AdministrativeArea", "name": "LATAM" }
+              ],
+              "priceRange": "$800 - $1800 USD",
+              "sameAs": [
+                "https://byklai.com",
+                "https://resources.byklai.com",
+                "https://afiliados.byklai.com"
+              ],
+              "knowsAbout": [
+                "Automatización de procesos con n8n",
+                "Desarrollo web con Next.js",
+                "Sistemas de captación de leads",
+                "Integraciones de API",
+                "CRM automation",
+                "Email marketing con Resend",
+                "Sanity CMS",
+                "AEO — Answer Engine Optimization"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Sistemas de Captación Automatizados",
+                "itemListElement": [
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Plan Básico",
+                    "description": "Base sólida de captación con landing optimizada, formulario, webhook y automatización inicial en n8n. Deploy en Vercel incluido."
+                  },
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Plan Completo",
+                    "description": "Sistema end-to-end con CRM integrado, email automation con Resend, DNS configurado y seguimiento automático de leads."
+                  },
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Plan Avanzado",
+                    "description": "Arquitectura escalable con lógica condicional avanzada, flujos de venta automatizados y sistema preparado para crecer sin reconstruirse."
+                  }
+                ]
+              }
+            })
+          }}
         />
       </Head>
 
