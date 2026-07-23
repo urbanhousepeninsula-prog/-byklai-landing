@@ -1,10 +1,10 @@
 // components/CaseStudy.tsx
-// Sección de caso de estudio — Pekmex Is Life
+// Sección de casos de estudio — Pekmex Is Life + BIF™ by BYKLAI
 // Reemplaza la sección anterior del caso Pekmex en index.tsx
 
 export default function CaseStudy() {
   return (
-    <section className="section" id="caso-pekmex">
+    <section className="section" id="casos-estudio">
       <div className="wrap">
         <div className="section-label">proyecto real</div>
         <h2 className="section-title">
@@ -212,6 +212,156 @@ export default function CaseStudy() {
               Sitio editorial funcional, con identidad coherente, sistema de
               diseño documentado y replicable, y arquitectura preparada para
               escalar con nuevas colecciones, Pekmex TV y página de fundación.
+            </p>
+          </div>
+        </div>
+
+        {/* ══════════════ CASO 2 — BIF™ by BYKLAI ══════════════ */}
+        <div className="case-card">
+          {/* ── HEADER ── */}
+          <div className="case-header">
+            <span className="case-tag">caso de estudio · 2026</span>
+            <h3>BIF™ — BYKLAI Investment Framework</h3>
+            <p className="case-year">
+              Mérida, Yucatán — proyecto propio de Armando Medina Vázquez
+            </p>
+            <p className="case-desc">
+              Sistema completo de inteligencia inmobiliaria: desde la
+              creación de una metodología propietaria de análisis de
+              inversión hasta su posicionamiento como fuente citada por
+              buscadores e IA generativa.
+            </p>
+            <a
+              href="https://bif.byklai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="case-link"
+            >
+              ver el sistema en producción → bif.byklai.com
+            </a>
+          </div>
+
+          {/* ── DIAGNÓSTICO ── */}
+          <div className="case-diag">
+            <p className="case-diag-label">diagnóstico inicial</p>
+            <p>
+              Mercado inmobiliario sin un sistema de evaluación objetivo —
+              desarrolladores, asesores y portales operan cada uno con su
+              propio incentivo. No existía metodología propia, presencia
+              editorial ni infraestructura para capturar y calificar leads
+              de inversión.
+            </p>
+          </div>
+
+          {/* ── PILARES ── */}
+          <div className="case-pillars">
+            <div className="pillar">
+              <p className="pillar-label">metodología propietaria</p>
+              <strong>BIF™: framework de 4 bloques</strong>
+              <p>
+                Sistema de evaluación con 4 bloques (Valor Intrínseco,
+                Mercado, Futuro, Riesgo), BIS™ Score, Fit Score™ y 8 Critical
+                Risk Flags™ — reglas y rúbricas documentadas desde cero.
+              </p>
+            </div>
+            <div className="pillar">
+              <p className="pillar-label">arquitectura editorial</p>
+              <strong>Roadmap de 50 artículos + Glosario BIF™</strong>
+              <p>
+                Blog estructurado en 3 pilares (análisis, educación,
+                mercado) más un glosario de más de 100 términos como hub de
+                autoridad SEO, AEO y LLMO.
+              </p>
+            </div>
+            <div className="pillar">
+              <p className="pillar-label">sistema de agentes IA</p>
+              <strong>6 agentes operando el ciclo editorial</strong>
+              <p>
+                Desde el blueprint hasta la distribución semanal, incluyendo
+                un agente conversacional de WhatsApp disponible 24/7.
+              </p>
+            </div>
+          </div>
+
+          {/* ── IMPLEMENTACIÓN TÉCNICA ── */}
+          <div className="case-deliverables">
+            <p className="section-label">implementación técnica</p>
+            <div className="del-grid">
+              <div className="del-item">
+                <strong>CMS + schema propietario</strong>
+                <span>
+                  Sanity con 4 document types (artículos, portafolio,
+                  glosario, nurturing) y 8 componentes reutilizables.
+                </span>
+              </div>
+              <div className="del-item">
+                <strong>Base de datos + automatización</strong>
+                <span>
+                  Supabase con RLS activado, n8n para captura de leads,
+                  GitHub Actions para brief semanal automatizado.
+                </span>
+              </div>
+              <div className="del-item">
+                <strong>Agente conversacional 24/7</strong>
+                <span>
+                  WhatsApp Business con IA — responde sobre el framework,
+                  zonas y desarrollos en segundos, sin intervención manual.
+                </span>
+              </div>
+              <div className="del-item">
+                <strong>SEO + AEO + LLMO</strong>
+                <span>
+                  Schema.org (DefinedTerm, FAQPage, Speakable), sitemap
+                  dinámico y glosario diseñado para ser citado por ChatGPT,
+                  Perplexity y Gemini.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* ── STACK ── */}
+          <div className="case-stack">
+            <p className="stack-label">stack</p>
+            <div className="chips">
+              {[
+                "Next.js App Router",
+                "Sanity CMS",
+                "Supabase",
+                "n8n",
+                "GitHub Actions",
+                "Vercel",
+                "WhatsApp Business API",
+                "Schema.org",
+              ].map((tech) => (
+                <span key={tech} className="chip">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* ── INVERSIÓN ── */}
+          <div className="case-investment">
+            <div>
+              <p className="investment-label">inversión total del proyecto</p>
+              <p className="investment-amount">
+                $9,300<span>USD</span>
+              </p>
+            </div>
+            <p className="investment-desc">
+              Arquitectura completa: metodología propietaria, CMS, base de
+              datos, sistema de agentes IA y glosario SEO/AEO/LLMO.
+            </p>
+          </div>
+
+          {/* ── RESULTADO ── */}
+          <div className="case-result">
+            <p className="result-label">resultado</p>
+            <p>
+              Sistema propietario operando en producción en
+              bif.byklai.com, con metodología documentada, roadmap
+              editorial de 50 artículos, glosario de autoridad temática y
+              captura de leads automatizada de principio a fin.
             </p>
           </div>
         </div>

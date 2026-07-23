@@ -328,6 +328,72 @@
   line-height: 1.3;
 }
 
+/* ── SEPARACIÓN ENTRE VARIOS CASOS ── */
+.case-card + .case-card {
+  margin-top: 36px;
+}
+
+/* ── LINK AL PROYECTO ── */
+.case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 12px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.06em;
+  color: #2d6a4f;
+  text-decoration: none;
+  border-bottom: 1px solid #2d6a4f;
+  padding-bottom: 2px;
+}
+
+.case-link:hover {
+  opacity: 0.7;
+}
+
+/* ── INVERSIÓN DEL PROYECTO ── */
+.case-investment {
+  padding: 24px 36px;
+  background: #d8f3dc;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.investment-label {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2d6a4f;
+  margin-bottom: 6px;
+}
+
+.investment-amount {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: #1e4f39;
+  line-height: 1;
+}
+
+.investment-amount span {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  color: #2d6a4f;
+  margin-left: 4px;
+}
+
+.investment-desc {
+  font-size: 13px;
+  color: #2d6a4f;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 380px;
+}
+
 /* ── RESULTADO ── */
 .case-result {
   padding: 28px 36px;
@@ -359,6 +425,7 @@
   .case-deliverables,
   .case-stack,
   .case-lighthouse,
+  .case-investment,
   .case-result {
     padding-left: 20px;
     padding-right: 20px;

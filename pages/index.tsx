@@ -137,6 +137,7 @@ export default function Home() {
               "priceRange": "$800 - $1800 USD",
               "sameAs": [
                 "https://byklai.com",
+                "https://bif.byklai.com",
                 "https://resources.byklai.com",
                 "https://afiliados.byklai.com"
               ],
@@ -334,7 +335,9 @@ export default function Home() {
                   </div>
                 )}
                 <p className="font-mono text-[14px] font-medium text-ink3 mb-3 tracking-wider">{plan.name}</p>
-                <p className="font-serif text-[36px] tracking-tight leading-none mb-2">{plan.price}</p>
+                <p className="font-serif text-[36px] tracking-tight leading-none mb-2">
+                  {plan.price}<span className="text-[13px] font-sans font-normal text-ink3 ml-1.5 align-top">USD</span>
+                </p>
                 <p className="text-[13px] text-ink2 mb-5 leading-relaxed">{plan.desc}</p>
                 <ul className="flex flex-col gap-2 mb-6 flex-1">
                   {plan.features.map(f => (
