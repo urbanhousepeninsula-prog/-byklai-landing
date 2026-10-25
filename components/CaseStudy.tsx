@@ -83,7 +83,7 @@ export default function CaseStudy() {
                 <strong>Automatización n8n</strong>
                 <span>
                   Formularios de captura conectados a n8n. Flujos activos desde
-                  el primer contacto sin intervención manual.
+                  el primer contacto.
                 </span>
               </div>
               <div className="del-item">
@@ -266,16 +266,16 @@ export default function CaseStudy() {
             </div>
             <div className="pillar">
               <p className="pillar-label">arquitectura editorial</p>
-              <strong>Roadmap de 50 artículos + Glosario BIF™</strong>
+              <strong>62 artículos publicados + Glosario BIF™</strong>
               <p>
                 Blog estructurado en 3 pilares (análisis, educación,
-                mercado) más un glosario de más de 100 términos como hub de
+                mercado) más un glosario de 34 términos como hub de
                 autoridad SEO, AEO y LLMO.
               </p>
             </div>
             <div className="pillar">
               <p className="pillar-label">sistema de agentes IA</p>
-              <strong>6 agentes operando el ciclo editorial</strong>
+              <strong>10 agentes operando el ciclo editorial</strong>
               <p>
                 Desde el blueprint hasta la distribución semanal, incluyendo
                 un agente conversacional de WhatsApp disponible 24/7.
@@ -298,14 +298,14 @@ export default function CaseStudy() {
                 <strong>Base de datos + automatización</strong>
                 <span>
                   Supabase con RLS activado, n8n para captura de leads,
-                  GitHub Actions para brief semanal automatizado.
+                  GitHub Actions para el brief semanal (activación manual).
                 </span>
               </div>
               <div className="del-item">
                 <strong>Agente conversacional 24/7</strong>
                 <span>
                   WhatsApp Business con IA — responde sobre el framework,
-                  zonas y desarrollos en segundos, sin intervención manual.
+                  zonas y desarrollos en segundos.
                 </span>
               </div>
               <div className="del-item">
