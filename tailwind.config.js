@@ -13,8 +13,9 @@ module.exports = {
         surface:  '#fafaf8',
         surface2: '#f2f1ed',
         line:     'rgba(0,0,0,0.08)',
-        green:    '#2d6a4f',
-        'green-bg': '#d8f3dc',
+        accent:      '#E08A00',
+        'accent-ink': '#8A5300',
+        'accent-bg':  '#FCEFD9',
       },
       fontFamily: {
         sans:  ['Outfit', 'sans-serif'],

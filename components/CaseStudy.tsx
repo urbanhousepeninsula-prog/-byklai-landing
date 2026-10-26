@@ -343,14 +343,15 @@ export default function CaseStudy() {
           {/* ── INVERSIÓN ── */}
           <div className="case-investment">
             <div>
-              <p className="investment-label">inversión total del proyecto</p>
+              <p className="investment-label">inversión de referencia · sistema similar</p>
               <p className="investment-amount">
                 $9,300<span>USD</span>
               </p>
             </div>
             <p className="investment-desc">
-              Arquitectura completa: metodología propietaria, CMS, base de
-              datos, sistema de agentes IA y glosario SEO/AEO/LLMO.
+              Lo que se cotiza un sistema con esta arquitectura para otro
+              negocio: metodología propia, CMS, base de datos, agentes de
+              IA y glosario SEO/AEO/LLMO.
             </p>
           </div>
 

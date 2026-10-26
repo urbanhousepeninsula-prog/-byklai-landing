@@ -115,7 +115,7 @@ export default function Home() {
               "name": "Byklai",
               "alternateName": "Byklai — Sistemas Automatizados de Captación",
               "url": "https://www.byklai.com",
-              "logo": "https://www.byklai.com/logo-byklai_TN.png",
+              "logo": "https://www.byklai.com/logo-byklai_ambar.png",
               "description": "Byklai es un estudio de sistemas digitales en Mérida, México, fundado por Armando Medina Vázquez. Diseña e implementa ecosistemas completos de captación de leads, automatización de procesos y desarrollo web con Next.js, n8n, Sanity CMS y Stripe. Especializado en infraestructura digital para negocios en LATAM.",
               "founder": {
                 "@type": "Person",
@@ -183,7 +183,7 @@ export default function Home() {
         <nav className="sticky top-0 z-50 bg-surface border-b border-line py-4">
           <div className="max-w-4xl mx-auto px-6 flex justify-between items-center">
             <div className="nav-logo">
-              <Image src="/logo-byklai_TN.png" alt="byklai.com" width={140} height={37} priority />
+              <Image src="/logo-byklai_ambar.png" alt="byklai.com" width={140} height={37} priority />
             </div>
             <a href="#form" className="font-mono text-xs font-medium px-4 py-2 border-[1.5px] border-ink rounded-full hover:bg-ink hover:text-white transition-colors">
               → solicitar sistema
@@ -194,7 +194,7 @@ export default function Home() {
         {/* HERO */}
         <section className="max-w-4xl mx-auto px-6 py-16 md:py-20 border-b border-line">
           <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-ink3 border border-line px-3 py-1.5 rounded-full mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
             sistemas de captación automatizados
           </div>
           <h1 className="font-serif text-[clamp(32px,5vw,52px)] leading-[1.1] tracking-tight mb-5 max-w-2xl">
@@ -258,7 +258,7 @@ export default function Home() {
             Cada componente está diseñado para encajar con el siguiente. El sistema funciona solo, sin que tengas que mover nada.
           </p>
           <div className="bg-ink rounded-xl px-7 py-5 flex flex-wrap items-center gap-y-2 overflow-x-auto scrollbar-hide">
-            <Image src="/logo-byklai_TB.png" alt="byklai" width={90} height={24} className="opacity-80 mr-4 flex-shrink-0" />
+            <Image src="/logo-byklai_ambar.png" alt="byklai" width={90} height={24} className="opacity-80 mr-4 flex-shrink-0" />
             {['Landing', 'Formulario', 'Webhook n8n', 'CRM', 'Email Resend', 'Seguimiento'].map((node, i, arr) => (
               <div key={node} className="flex items-center flex-shrink-0">
                 <span className="font-mono text-[11px] text-white opacity-90 px-3.5 py-1.5 border border-white/20 rounded-md tracking-wider whitespace-nowrap">
@@ -328,9 +328,9 @@ export default function Home() {
                 features: ['Todo lo del plan Completo', 'Lógica condicional avanzada', 'Flujos de venta automatizados', 'Escalabilidad sin rehacer el sistema'],
               },
             ].map(plan => (
-              <div key={plan.name} className={`relative rounded-2xl flex flex-col p-6 ${plan.featured ? 'border-2 border-ink bg-white' : 'border border-line bg-surface'}`}>
+              <div key={plan.name} className={`relative rounded-2xl flex flex-col p-6 ${plan.featured ? 'border-2 border-accent bg-white' : 'border border-line bg-surface'}`}>
                 {plan.featured && (
-                  <div className="absolute -top-px left-1/2 -translate-x-1/2 font-mono text-[10px] tracking-wider bg-ink text-white px-3 py-1 rounded-b-lg whitespace-nowrap">
+                  <div className="absolute -top-px left-1/2 -translate-x-1/2 font-mono text-[10px] tracking-wider bg-accent text-ink px-3 py-1 rounded-b-lg whitespace-nowrap">
                     más solicitado
                   </div>
                 )}
@@ -341,7 +341,7 @@ export default function Home() {
                 <p className="text-[13px] text-ink2 mb-5 leading-relaxed">{plan.desc}</p>
                 <ul className="flex flex-col gap-2 mb-6 flex-1">
                   {plan.features.map(f => (
-                    <li key={f} className="text-[13px] text-ink2 pl-4 relative before:content-['✓'] before:absolute before:left-0 before:text-green before:text-[12px] before:font-semibold">{f}</li>
+                    <li key={f} className="text-[13px] text-ink2 pl-4 relative before:content-['✓'] before:absolute before:left-0 before:text-accent-ink before:text-[12px] before:font-semibold">{f}</li>
                   ))}
                 </ul>
                 <a href="#form" className={`block text-center font-mono text-[12px] font-medium py-2.5 border-[1.5px] border-ink rounded-full transition-colors mt-auto ${plan.featured ? 'bg-ink text-white hover:bg-ink2' : 'text-ink hover:bg-ink hover:text-white'}`}>
@@ -470,7 +470,7 @@ export default function Home() {
         {/* FOOTER */}
         <footer className="border-t border-line py-6">
           <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3 flex-wrap">
-            <Image src="/logo-byklai_TN.png" alt="byklai.com" width={100} height={27} className="opacity-60" />
+            <Image src="/logo-byklai_ambar.png" alt="byklai.com" width={100} height={27} className="opacity-60" />
             <span className="font-mono text-[12px] text-ink3">© 2026 byklai.com — sistemas automatizados</span>
             <span className="font-mono text-[12px] text-ink3">Next.js + n8n + Resend</span>
           </div>
