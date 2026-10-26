@@ -9,6 +9,7 @@ interface FormData {
   telefono: string
   tipo_negocio: string
   que_necesitas: string
+  interes_meses: string
   mensaje: string
   website: string // honeypot
 }
@@ -28,6 +29,7 @@ export default function Home() {
     telefono: '',
     tipo_negocio: '',
     que_necesitas: '',
+    interes_meses: '',
     mensaje: '',
     website: '',
   })
@@ -74,6 +76,7 @@ export default function Home() {
           telefono: form.telefono.trim(),
           tipo_negocio: form.tipo_negocio,
           que_necesitas: form.que_necesitas,
+          interes_meses: form.interes_meses,
           mensaje: form.mensaje.trim(),
         }),
       })
@@ -331,13 +334,14 @@ export default function Home() {
               <div key={plan.name} className={`relative rounded-2xl flex flex-col p-6 ${plan.featured ? 'border-2 border-accent bg-white' : 'border border-line bg-surface'}`}>
                 {plan.featured && (
                   <div className="absolute -top-px left-1/2 -translate-x-1/2 font-mono text-[10px] tracking-wider bg-accent text-ink px-3 py-1 rounded-b-lg whitespace-nowrap">
-                    más solicitado
+                    recomendado
                   </div>
                 )}
                 <p className="font-mono text-[14px] font-medium text-ink3 mb-3 tracking-wider">{plan.name}</p>
                 <p className="font-serif text-[36px] tracking-tight leading-none mb-2">
                   {plan.price}<span className="text-[13px] font-sans font-normal text-ink3 ml-1.5 align-top">USD</span>
                 </p>
+                <p className="font-mono text-[11px] text-accent-ink mb-4">o hasta 6 meses sin intereses</p>
                 <p className="text-[13px] text-ink2 mb-5 leading-relaxed">{plan.desc}</p>
                 <ul className="flex flex-col gap-2 mb-6 flex-1">
                   {plan.features.map(f => (
@@ -349,6 +353,17 @@ export default function Home() {
                 </a>
               </div>
             ))}
+          </div>
+          <div className="mt-4 rounded-2xl bg-accent-bg p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <p className="font-serif text-[22px] tracking-tight leading-snug">
+                Paga tu sistema en hasta 6 meses<em className="text-accent-ink"> sin intereses</em>.
+              </p>
+              <p className="text-[13px] text-ink2 mt-1">Con tu tarjeta de crédito a través de Mercado Pago. Pregúntanos por el plan que mejor se acomode a tu negocio.</p>
+            </div>
+            <a href="#form" className="shrink-0 text-center font-mono text-[12px] font-medium px-6 py-3 bg-ink text-white rounded-full border-[1.5px] border-ink hover:bg-ink2 transition-colors whitespace-nowrap">
+              preguntar por el plan →
+            </a>
           </div>
           <p className="font-mono text-[12px] text-ink3 mt-4 text-center">Cada sistema se adapta al flujo y contexto de tu negocio.</p>
         </section>
@@ -414,6 +429,15 @@ export default function Home() {
                     <option>Sistema completo end-to-end</option>
                     <option>Revisión / mejora de sistema existente</option>
                     <option>Todavía no tengo claro</option>
+                  </select>
+                </div>
+
+                <div className="flex flex-col gap-1.5 sm:col-span-2">
+                  <label className="font-mono text-[11px] uppercase tracking-wider text-ink3">¿te interesa pagar a meses con tarjeta?</label>
+                  <select name="interes_meses" value={form.interes_meses} onChange={handleChange} className="w-full font-sans text-sm px-3.5 py-3 rounded-lg border border-line outline-none transition-colors bg-white text-ink focus:border-ink" style={{ WebkitAppearance: 'none' }}>
+                    <option value="">Prefiero no decir</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
 
