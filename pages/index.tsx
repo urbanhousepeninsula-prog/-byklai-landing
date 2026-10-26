@@ -201,7 +201,7 @@ export default function Home() {
             Tu negocio capta leads.<br /><em className="text-ink2">Tu sistema los convierte.</em>
           </h1>
           <p className="text-[17px] text-ink2 max-w-xl mb-9 leading-relaxed font-light">
-            Diseño e implemento el sistema completo que conecta tu landing, formulario, CRM y seguimiento automático — desde el día uno, sin intervención manual.
+            Diseño e implemento el sistema completo que conecta tu landing, formulario, CRM y seguimiento automático — desde el día uno.
           </p>
           <div className="flex flex-wrap gap-3 items-center">
             <a href="#form" className="font-mono text-[13px] font-medium px-7 py-3.5 bg-ink text-white rounded-full border-[1.5px] border-ink hover:bg-ink2 transition-colors">
@@ -257,7 +257,7 @@ export default function Home() {
           <p className="text-ink2 font-light max-w-lg mb-7">
             Cada componente está diseñado para encajar con el siguiente. El sistema funciona solo, sin que tengas que mover nada.
           </p>
-          <div className="bg-ink rounded-xl px-7 py-5 flex items-center gap-0 overflow-x-auto scrollbar-hide">
+          <div className="bg-ink rounded-xl px-7 py-5 flex flex-wrap items-center gap-y-2 overflow-x-auto scrollbar-hide">
             <Image src="/logo-byklai_TB.png" alt="byklai" width={90} height={24} className="opacity-80 mr-4 flex-shrink-0" />
             {['Landing', 'Formulario', 'Webhook n8n', 'CRM', 'Email Resend', 'Seguimiento'].map((node, i, arr) => (
               <div key={node} className="flex items-center flex-shrink-0">
@@ -268,7 +268,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p className="font-mono text-[13px] text-ink3 mt-4">Cada lead entra, se registra, recibe respuesta y queda activo — sin intervención manual.</p>
+          <p className="font-mono text-[13px] text-ink3 mt-4">Cada lead entra, se registra, recibe respuesta y queda en seguimiento automático.</p>
         </section>
 
         {/* INCLUDES */}

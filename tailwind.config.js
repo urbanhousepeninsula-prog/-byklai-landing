@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         ink:      '#0a0a0a',
         ink2:     '#3a3a3a',
-        ink3:     '#888888',
+        ink3:     '#6b6b6b',
         surface:  '#fafaf8',
         surface2: '#f2f1ed',
         line:     'rgba(0,0,0,0.08)',

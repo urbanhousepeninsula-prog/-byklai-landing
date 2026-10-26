@@ -359,8 +359,8 @@ export default function CaseStudy() {
             <p className="result-label">resultado</p>
             <p>
               Sistema propietario operando en producción en
-              bif.byklai.com, con metodología documentada, roadmap
-              editorial de 50 artículos, glosario de autoridad temática y
+              bif.byklai.com, con metodología documentada, 62 artículos
+              publicados, glosario de autoridad temática y
               captura de leads automatizada de principio a fin.
             </p>
           </div>
