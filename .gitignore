@@ -22,5 +22,13 @@ yarn-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# dry-run del script de subida de artículos — nunca commitear
+/output/
+
+# Sanity Studio
+/studio/node_modules
+/studio/dist
+/studio/.sanity
+
 # OS
 .DS_Store
