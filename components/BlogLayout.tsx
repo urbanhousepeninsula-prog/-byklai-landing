@@ -9,9 +9,14 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
           <a href="/" className="nav-logo">
             <Image src="/logo-byklai_ambar.png" alt="byklai.com" width={140} height={37} priority />
           </a>
-          <a href="/#form" className="font-mono text-xs font-medium px-4 py-2 border-[1.5px] border-ink rounded-full hover:bg-ink hover:text-white transition-colors">
-            → solicitar sistema
-          </a>
+          <div className="flex items-center gap-6">
+            <a href="/blog" className="hidden sm:inline font-mono text-xs uppercase tracking-wider text-ink3 hover:text-ink transition-colors">
+              blog
+            </a>
+            <a href="/#form" className="font-mono text-xs font-medium px-4 py-2 border-[1.5px] border-ink rounded-full hover:bg-ink hover:text-white transition-colors whitespace-nowrap">
+              → solicitar sistema
+            </a>
+          </div>
         </div>
       </nav>
 
