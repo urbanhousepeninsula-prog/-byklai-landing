@@ -20,10 +20,69 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--surface);
   color: var(--ink);
+}
+
+/* Reveal al hacer scroll — ver lib/useReveal.ts. El contenido SIEMPRE arranca
+   visible (sin clase = opacity:1, posición normal); .reveal-animate solo
+   agrega una animación de entrada de una vez, nunca oculta nada a la espera
+   de JS/del observer (evita CLS y problemas de accesibilidad/SEO). */
+@keyframes revealIn {
+  from {
+    opacity: 0.4;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal-animate {
+  animation: revealIn 0.5s ease both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-animate {
+    animation: none;
+  }
+}
+
+/* :focus-visible ámbar consistente en toda la landing */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #e08a00;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Saltar al contenido — visible solo con teclado */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: #e08a00;
+  color: #0b0a08;
+  padding: 12px 20px;
+  border-radius: 0 0 8px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
 }
 
 .font-serif {

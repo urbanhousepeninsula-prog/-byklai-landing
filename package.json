@@ -5,9 +5,11 @@
   "type": "commonjs",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-no-placeholders.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check:placeholders": "node scripts/check-no-placeholders.js",
     "subir-sanity": "ts-node --project tsconfig.scripts.json scripts/subir-articulo-sanity.ts"
   },
   "dependencies": {
